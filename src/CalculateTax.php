@@ -25,3 +25,7 @@ Biaya impor = Biaya Bea Masuk + PPN Impor harus dibayar + Pph Impor harus dibaya
 Jumlah uang untuk belanja:
 
 Total payment = Harga barang + Biaya Bea Masuk + Total PDRI */
+
+class CalculateTax{
+    
+}
