@@ -1,4 +1,5 @@
 <?php
+namespace BeaCukai;
 
 class APIOwner implements PphTariff{
     public function CalculateTariff($val): float{
