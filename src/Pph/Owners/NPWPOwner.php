@@ -1,11 +1,10 @@
 <?php
 namespace BeaCukai;
 
-class APIOwner implements PphTariff{
+#TODO
 
-
-    
+class NPWPOwner implements PphTariff{
     public function CalculateTariff($val): float{
-        return $val * 0.025;
+        return $val * 0.075;
     }
 }

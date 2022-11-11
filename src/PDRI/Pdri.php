@@ -1,8 +1,4 @@
 <?php
 namespace BeaCukai;
 
-#TODO
-
-class Product{
-
-}
+class Pdri{}

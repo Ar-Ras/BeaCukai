@@ -1,8 +1,6 @@
 <?php
 namespace BeaCukai;
 
-#TODO
-
-class Configurator{
-
+class PpnTariff{
+    
 }
