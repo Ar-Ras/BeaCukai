@@ -1,4 +1,6 @@
 <?php
 namespace BeaCukai;
 
-class Pdri{}
+class Pdri{
+    
+}
