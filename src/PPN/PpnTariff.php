@@ -9,5 +9,13 @@ class PpnTariff{
         $this->prod = $product;
     }
 
-    
+    public function calculatePpn(float $importPayable){
+        #TODO: Get ppn from Product
+
+
+        $ppn = $this->prod->getPpn();
+        $payablePpn = $importPayable * $ppn;
+        
+        return $payablePpn;
+    }
 }
