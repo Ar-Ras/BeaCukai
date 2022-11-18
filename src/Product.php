@@ -33,4 +33,24 @@ class Product{
     public function getPpnBm(){
         return $this->ppnBm;
     }
+
+    public function setAmount($amount){
+        $this->amount = $amount;
+    }
+
+    public function setDescription($description){
+        $this->description = $description;
+    }
+
+    public function setHsCode($hs){
+        $this->hsCode = $hs;
+    }
+
+    public function setPpn($ppn){
+        $this->ppn = $ppn;
+    }
+
+    public function setPpnBm($ppnBm){
+        $this->ppnBm = $ppnBm;
+    }
 }
