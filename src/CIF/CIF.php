@@ -9,6 +9,10 @@ class CIF{
      private float $goodsCost;
      private float $CIF;
 
+      public function __construct(){
+         
+      }
+
      public function calculateCIF(float $insuranceCost, float $shippingCost, $goodsCost): float{
         return 0.01;
      }
