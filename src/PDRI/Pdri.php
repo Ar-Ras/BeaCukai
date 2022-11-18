@@ -27,7 +27,7 @@ class Pdri{
     }
 
     public function calculatePayablePpnBm(): float{
-        #TODO: Optional function. Has complicated procedure
+        #TODO: Algo: Has complicated procedure
 
         /* PPN = Tarif PPN x (Harga Barang – PPnBM)
 
@@ -54,6 +54,9 @@ class Pdri{
         return $this->totalImportFee;
     }
 
+
+
+    /* Redundant getter */
     public function getPayablePpn(): float{
         return $this->payablePpn;
     }

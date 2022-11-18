@@ -7,6 +7,8 @@ class Product{
     private string $hsCode;
     private string $description;
     private int $amount;
+    private int $price;
+    private float $EntryFee;
     private float $ppn;
     private float $ppnBm;
 
@@ -34,6 +36,10 @@ class Product{
         return $this->ppnBm;
     }
 
+    public function getEntryFee(){
+        return $this->EntryFee;
+    }
+
     public function setAmount($amount){
         $this->amount = $amount;
     }
@@ -52,5 +58,9 @@ class Product{
 
     public function setPpnBm($ppnBm){
         $this->ppnBm = $ppnBm;
+    }
+
+    public function setEntryFee($entryFee){
+        $this->entryFee = $entryFee;
     }
 }
