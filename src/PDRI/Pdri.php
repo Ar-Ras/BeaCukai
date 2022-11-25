@@ -27,6 +27,11 @@ class Pdri{
     }
 
     public function calculatePayablePpnBm(): float{
+        $ppnBm = new PpnBmTariff($this->product);
+
+        $ppn = $this->payablePpn;
+
+        
         #TODO: Algo: Has complicated procedure
 
         /* PPN = Tarif PPN x (Harga Barang – PPnBM)

@@ -8,6 +8,8 @@ class CIF{
      private float $shippingCost;
      private float $goodsCost;
      private float $CIF;
+     private float $customsFee;
+
 
       public function __construct(){
          #TODO
@@ -19,10 +21,12 @@ class CIF{
          return $this->CIF;
      }
 
-     public function calculateCustomsFee(): float {
-        return 0.02;
+     public function calculateCustomsFee(float $importFee): float {
+         $this->customsFee = $importFee * $this->CIF;  
+         return $this->customsFee;
      }
+
      public function calculateTotalImportFee(): float {
-        return 0.03;
+        return $this->customsFee + $this->goodsCost;
      }
 }

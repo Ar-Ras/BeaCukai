@@ -41,7 +41,7 @@ class Product{
     }
 
     public function getPrice(){
-        return $this->Price;
+        return $this->price;
     }
 
     public function setPrice($price){

@@ -29,11 +29,24 @@ Jumlah uang untuk belanja:
 Total payment = Harga barang + Biaya Bea Masuk + Total PDRI */
 
 class CalculateTax{
-    public function __construct(){
-        #TODO
+    private Product $prod;
+    private CIF $cif;
+    private Pdri $pdri;
+
+    public function __construct(Product $prod){
+        $this->prod = $prod;
     }
 
-    public function calculateCIF(){
+    public function calculateCIF(float $insuranceCost, float $shippingCost){
+        $cif = new CIF();
+
+        $goodsCost = $this->prod->getPrice();
+        $importFee = $this->prod->getEntryTax();
+
+        $cif->calculateCIF($insuranceCost, $shippingCost, $goodsCost);
+        $cif->calculateCustomsFee($importFee);
+        $cifNominal = $cif->calculateTotalImportFee();
+
         #TODO
     }
 
