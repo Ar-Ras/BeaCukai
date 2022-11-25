@@ -10,11 +10,13 @@ class CIF{
      private float $CIF;
 
       public function __construct(){
-         
+         #TODO
       }
 
      public function calculateCIF(float $insuranceCost, float $shippingCost, $goodsCost): float{
-        return 0.01;
+         $this->CIF = $insuranceCost + $shippingCost + $goodsCost;
+
+         return $this->CIF;
      }
 
      public function calculateCustomsFee(): float {

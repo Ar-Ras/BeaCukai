@@ -1,0 +1,17 @@
+[
+    {
+      "id" : 0,
+      "Nama" : "Non NPWP",
+      "Value" : 0.15
+    },
+    {
+      "id" : 1,
+      "Nama" : "NPWP",
+      "Value" : 0.075
+    },
+    {
+      "id" : 2,
+      "Nama" : "API Owner",
+      "Value" : 0.025
+    }
+  ]

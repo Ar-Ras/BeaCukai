@@ -8,12 +8,12 @@ class Product{
     private string $description;
     private int $amount;
     private int $price;
-    private float $EntryFee;
+    private float $EntryTax;
     private float $ppn;
     private float $ppnBm;
 
     public function __construct(){
-
+        #TODO
     }
 
     public function getHsCode(){
@@ -36,8 +36,16 @@ class Product{
         return $this->ppnBm;
     }
 
-    public function getEntryFee(){
-        return $this->EntryFee;
+    public function getEntryTax(){
+        return $this->EntryTax;
+    }
+
+    public function getPrice(){
+        return $this->Price;
+    }
+
+    public function setPrice($price){
+        $this->price = $price;
     }
 
     public function setAmount($amount){
@@ -60,7 +68,7 @@ class Product{
         $this->ppnBm = $ppnBm;
     }
 
-    public function setEntryFee($entryFee){
-        $this->entryFee = $entryFee;
+    public function setEntryTax($entryTax){
+        $this->entryTax = $entryTax;
     }
 }

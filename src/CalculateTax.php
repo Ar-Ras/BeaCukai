@@ -29,5 +29,19 @@ Jumlah uang untuk belanja:
 Total payment = Harga barang + Biaya Bea Masuk + Total PDRI */
 
 class CalculateTax{
-    
+    public function __construct(){
+        #TODO
+    }
+
+    public function calculateCIF(){
+        #TODO
+    }
+
+    public function calculatePDRI(){
+        #TODO
+    }
+
+    public function calculateTotal(){
+        #TODO
+    }
 }
