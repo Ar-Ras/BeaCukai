@@ -1,5 +1,5 @@
 <?php
-namespace BeaCukai;
+namespace ArRas\BeaCukai;
 
 class PpnTariff{
 
