@@ -4,6 +4,7 @@ namespace ArRas\BeaCukai\PDRI;
 use ArRas\BeaCukai\Product;
 use ArRas\BeaCukai\PPN\PpnTariff;
 use ArRas\BeaCukai\PPN\PpnBmTariff;
+use ArRas\BeaCukai\PPH\PphTariff;
 
 
 class Pdri{
@@ -14,6 +15,7 @@ class Pdri{
     private float $totalImportFee;
 
     private Product $product;
+    private PphTariff $pph;
     
 
     public function __construct(Product $product){
@@ -29,7 +31,17 @@ class Pdri{
     }
 
     public function calculatePayablePph(int $pphId): float{
-        
+        switch($pphId){
+            case(0):
+                break;
+            case(1):
+                break;
+            case(2): 
+                break;
+            default:
+                break;
+        }
+
         #TODO: Make selector depending on NPWP/API availability
         return 0.2;
     }
