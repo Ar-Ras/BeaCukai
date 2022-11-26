@@ -1,5 +1,6 @@
 <?php
-namespace BeaCukai;
+namespace ArRas\BeaCukai;
+
 
 use BeaCukai\CIF\CIF;
 use BeaCukai\PDRI\Pdri;
