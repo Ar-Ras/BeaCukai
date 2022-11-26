@@ -5,6 +5,12 @@ use ArRas\BeaCukai\Product;
 use ArRas\BeaCukai\PPN\PpnTariff;
 use ArRas\BeaCukai\PPN\PpnBmTariff;
 use ArRas\BeaCukai\PPH\PphTariff;
+use ArRas\BeaCukai\PPH\Owners\NonNPWPOwner;
+use ArRas\BeaCukai\PPH\Owners\NPWPOwner;
+use ArRas\BeaCukai\PPH\Owners\APIOwner;
+
+
+
 
 
 class Pdri{
@@ -30,20 +36,25 @@ class Pdri{
         return $this->payablePpn;
     }
 
-    public function calculatePayablePph(int $pphId): float{
+    public function calculatePayablePph(float $importPayable, int $pphId): float{
         switch($pphId){
             case(0):
+                $this->pph = new NonNPWPOwner();
                 break;
             case(1):
+                $this->pph = new NPWPOwner();
                 break;
             case(2): 
+                $this->pph = new APIOwner();
                 break;
             default:
+                echo "invalid";
                 break;
         }
 
+        $this->payablePph = $this->pph->calculateTariff($importPayable);
         #TODO: Make selector depending on NPWP/API availability
-        return 0.2;
+        return $this->payablePph;
     }
 
     public function calculatePayablePpnBm(float $importPayable): float{
