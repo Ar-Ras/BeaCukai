@@ -27,7 +27,7 @@ class Configurator{
 
     }
 
-    public static function getpphJsonContent(){
+    public static function getPphJsonContent(){
         global $pphJsonContent;
         return $pphJsonContent;
     }
