@@ -61,11 +61,11 @@ class Pdri{
         $ppn = $this->prod->getPpn();
 
 
-        $ppnBm = $ppnBmCalc->calculatePpnBm($importPayable);
+        $this->payablePpnBm = $ppnBmCalc->calculatePpnBm($importPayable);
 
         $ppn = $this->prod->getPpn();
 
-        $this->payablePpn = $ppn * ($this->prod->getPrice() - $ppnBm);
+        $this->payablePpn = $ppn * ($this->prod->getPrice() - $this->payablePpnBm);
         
 
 
@@ -90,7 +90,7 @@ class Pdri{
 
     public function calculateTotalImportFee(): float{
         
-        $this->totalImportFee = $this->payablePpn + $this->payablePph + $this->payableImport;
+        $this->totalImportFee = $this->payablePpn + $this->payablePph + $this->payableImport + $this->payablePpnBm;
         return $this->totalImportFee;
     }
 
