@@ -18,7 +18,6 @@ class APIOwner implements PphTariff{
             if ($pphJson[$i]['id'] == 2)
                 $pphVal = $pphJson[$i]['value'];
         }
-        #TODO: Get Pph value from Json
 
         return $val * $pphVal;
     }

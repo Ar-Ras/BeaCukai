@@ -17,10 +17,6 @@ class NonNPWPOwner implements PphTariff{
                 $pphVal = $pphJson[$i]['value'];
         }
 
-        
-
-
-        #TODO: Get Pph value from Json
         return $val * $pphVal;
     }   
 }

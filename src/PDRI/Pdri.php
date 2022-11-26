@@ -53,7 +53,6 @@ class Pdri{
         }
 
         $this->payablePph = $this->pph->calculateTariff($importPayable);
-        #TODO: Make selector depending on NPWP/API availability
         return $this->payablePph;
     }
 
@@ -64,15 +63,11 @@ class Pdri{
 
         $ppnBm = $ppnBmCalc->calculatePpnBm($importPayable);
 
-        $ppn = $this->payablePpn;
+        $ppn = $this->prod->getPpn();
+
+        $this->payablePpn = $ppn * ($this->prod->getPrice() - $ppnBm);
         
 
-
-
-
-
-        
-        #TODO: Algo: Has complicated procedure
 
         /* PPN = Tarif PPN x (Harga Barang – PPnBM)
 
@@ -90,7 +85,7 @@ class Pdri{
 
             =Rp2.920.000.000 
         */
-        return 0.3;
+        return $this->payablePpn;
     }
 
     public function calculateTotalImportFee(): float{
