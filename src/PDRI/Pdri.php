@@ -23,18 +23,30 @@ class Pdri{
     public function calculatePayablePpn(float $importPayable): float{
         $Ppn = new PpnTariff($this->product);
 
-        return $Ppn->calculatePpn($importPayable);
+        $this->payablePpn = $Ppn->calculatePpn($importPayable);
+
+        return $this->payablePpn;
     }
 
-    public function calculatePayablePph(): float{
+    public function calculatePayablePph(int $pphId): float{
+        
         #TODO: Make selector depending on NPWP/API availability
         return 0.2;
     }
 
-    public function calculatePayablePpnBm(): float{
-        $ppnBm = new PpnBmTariff($this->product);
+    public function calculatePayablePpnBm(float $importPayable): float{
+        $ppnBmCalc = new PpnBmTariff($this->product);
+        $ppn = $this->prod->getPpn();
+
+
+        $ppnBm = $ppnBmCalc->calculatePpnBm($importPayable);
 
         $ppn = $this->payablePpn;
+        
+
+
+
+
 
         
         #TODO: Algo: Has complicated procedure
@@ -58,9 +70,9 @@ class Pdri{
         return 0.3;
     }
 
-    public function calculateTotalImportFee(float $payablePpn, float $payablePph, float $payableImport): float{
+    public function calculateTotalImportFee(): float{
         
-        $this->totalImportFee = $payablePpn + $payablePph + $payableImport;
+        $this->totalImportFee = $this->payablePpn + $this->payablePph + $this->payableImport;
         return $this->totalImportFee;
     }
 

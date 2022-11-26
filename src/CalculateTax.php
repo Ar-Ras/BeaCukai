@@ -36,30 +36,43 @@ class CalculateTax{
     private Product $prod;
     private CIF $cif;
     private Pdri $pdri;
-    private $cifNominal;
+
+    private $cifValue;
+    private $pdriValue;
 
     public function __construct(Product $prod){
         $this->prod = $prod;
     }
 
     public function calculateCIF(float $insuranceCost, float $shippingCost){
-        $cif = new CIF();
+        $this->cif = new CIF();
 
         $goodsCost = $this->prod->getPrice();
         $importFee = $this->prod->getEntryTax();
 
-        $cif->calculateCIF($insuranceCost, $shippingCost, $goodsCost);
-        $cif->calculateCustomsFee($importFee);
-        $this->cifNominal = $cif->calculateTotalImportFee();
+        $this->cif->calculateCIF($insuranceCost, $shippingCost, $goodsCost);
+        $this->cif->calculateCustomsFee($importFee);
+        $this->cifValue = $this->cif->calculateTotalImportFee();
 
-        #TODO
     }
 
-    public function calculatePDRI(){
-        #TODO
+    public function calculatePDRI(int $pphId){
+        $this->pdri = new Pdri($this->prod);
+
+
+        $this->pdri->calculatePayablePpn($this->cifValue);
+        $this->pdri->calculatePayablePph($pphId);
+
+        if ($this->prod->getppnBm > 0)
+            $this->pdri->calculatePayablePpnBm($this->cifValue);
+
+
+        $this->pdriValue = $this->pdri->calculateTotalImportFee();
     }
 
     public function calculateTotal(){
-        #TODO
+        $price = $this->prod->getPrice();
+
+        return $price + $this->cifValue + $this->pdriValue;
     }
 }
