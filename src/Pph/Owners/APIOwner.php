@@ -1,7 +1,7 @@
 <?php
-namespace BeaCukai\PPH\Owners;
+namespace ArRas\BeaCukai\PPH\Owners;
 
-use BeaCukai\PPH\PphTariff;
+use ArRas\BeaCukai\PPH\PphTariff;
 
 #TODO
 

@@ -1,5 +1,5 @@
 <?php
-namespace BeaCukai\PPH;
+namespace ArRas\BeaCukai\PPH;
 
 #TODO
 

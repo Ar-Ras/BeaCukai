@@ -1,7 +1,7 @@
 <?php
-namespace BeaCukai\PPN;
+namespace ArRas\BeaCukai\PPN;
 
-use BeaCukai\Product;
+use ArRas\BeaCukai\Product;
 
 class PpnBmTariff{
     private Product $prod;

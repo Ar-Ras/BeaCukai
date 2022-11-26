@@ -1,5 +1,5 @@
 <?php
-namespace BeaCukai\CIF;
+namespace ArRas\BeaCukai\CIF;
 
 #TODO
 

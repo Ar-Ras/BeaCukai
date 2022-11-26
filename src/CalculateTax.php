@@ -1,9 +1,9 @@
 <?php
-namespace BeaCukai;
+namespace ArRas\BeaCukai;
 
 
-use BeaCukai\CIF\CIF;
-use BeaCukai\PDRI\Pdri;
+use ArRas\BeaCukai\CIF\CIF;
+use ArRas\BeaCukai\PDRI\Pdri;
 
 #TODO
 

@@ -1,9 +1,9 @@
 <?php
-namespace BeaCukai\PDRI;
+namespace ArRas\BeaCukai\PDRI;
 
-use BeaCukai\Product;
-use BeaCukai\PPN\PpnTariff;
-use BeaCukai\PPN\PpnBmTariff;
+use ArRas\BeaCukai\Product;
+use ArRas\BeaCukai\PPN\PpnTariff;
+use ArRas\BeaCukai\PPN\PpnBmTariff;
 
 
 class Pdri{
