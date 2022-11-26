@@ -1,5 +1,5 @@
 <?php
-namespace ArRas\BeaCukai;
+namespace BeaCukai;
 
 
 use BeaCukai\CIF\CIF;
