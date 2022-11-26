@@ -32,6 +32,7 @@ class CalculateTax{
     private Product $prod;
     private CIF $cif;
     private Pdri $pdri;
+    private $cifNominal;
 
     public function __construct(Product $prod){
         $this->prod = $prod;
@@ -45,7 +46,7 @@ class CalculateTax{
 
         $cif->calculateCIF($insuranceCost, $shippingCost, $goodsCost);
         $cif->calculateCustomsFee($importFee);
-        $cifNominal = $cif->calculateTotalImportFee();
+        $this->cifNominal = $cif->calculateTotalImportFee();
 
         #TODO
     }

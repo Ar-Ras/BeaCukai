@@ -4,14 +4,25 @@ namespace BeaCukai;
 #TODO
 
 class Configurator{
-    private String $pphJsonPath = "../../database/pph.json";
-    private String $BeaCukaiPath = "";
+    private static String $pphJsonPath = "../../database/pph.json";
+    private static String $BeaCukaiJsonPath = "";
+    private static $pphJsonContent;
 
-    public function setpphJsonPath($pphJsonPath){
-     $this->pphJsonPath = $pphJsonPath;   
+    public static function setpphJsonPath($pphPath){
+     global $pphJsonPath;
+     $pphJsonPath = $pphPath;
+
+     $pphJsonContent = json_decode(file_get_contents($pphPath));
+
     }
 
-    public function setBeaCukaiPath($beaCukaiPath){
-        $this->beaCukaiPath = $beaCukaiPath;
+    public static function setBeaCukaiPath($beaCukaiPath){
+        global $beaCukaiJsonPath;
+        $beaCukaiJsonPath = $beaCukaiPath;
+    }
+
+    public static function getpphJsonContent(){
+        global $pphJsonContent;
+        return $pphJsonContent;
     }
 }
