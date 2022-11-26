@@ -8,6 +8,10 @@ use ArRas\BeaCukai\cfg\Configurator;
 
 class APIOwner implements PphTariff{
 
+    public function __construct(){
+        
+    }
+
 
 
     public function CalculateTariff($val): float{

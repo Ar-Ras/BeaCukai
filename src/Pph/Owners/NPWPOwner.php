@@ -8,6 +8,11 @@ use ArRas\BeaCukai\cfg\Configurator;
 #TODO
 
 class NPWPOwner implements PphTariff{
+    
+    public function __construct(){
+        
+    }
+
     public function CalculateTariff($val): float{
         $pphJson = Configurator::getPphJsonContent();
         $pphVal = 0.01;
