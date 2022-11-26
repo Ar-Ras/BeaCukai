@@ -1,5 +1,5 @@
 <?php
-namespace ArRas\BeaCukai;
+namespace BeaCukai;
 
 #TODO
 
