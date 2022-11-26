@@ -1,6 +1,9 @@
 <?php
 namespace BeaCukai;
 
+use BeaCukai\CIF\CIF;
+use BeaCukai\PDRI\Pdri;
+
 #TODO
 
 /* Perhitungan import, dalam rupiah:

@@ -1,5 +1,10 @@
 <?php
-namespace BeaCukai;
+namespace BeaCukai\PDRI;
+
+use BeaCukai\Product;
+use BeaCukai\PPN\PpnTariff;
+use BeaCukai\PPN\PpnBmTariff;
+
 
 class Pdri{
 

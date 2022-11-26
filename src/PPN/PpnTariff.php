@@ -1,5 +1,8 @@
 <?php
-namespace BeaCukai;
+namespace BeaCukai\PPN;
+
+use BeaCukai\Product;
+
 
 class PpnTariff{
 

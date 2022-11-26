@@ -1,5 +1,8 @@
 <?php
-namespace BeaCukai;
+namespace BeaCukai\PPH\Owners;
+
+use BeaCukai\PPH\PphTariff;
+
 
 #TODO
 

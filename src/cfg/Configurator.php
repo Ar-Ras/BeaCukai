@@ -1,5 +1,5 @@
 <?php
-namespace BeaCukai;
+namespace BeaCukai\cfg;
 
 #TODO
 
@@ -9,7 +9,7 @@ class Configurator{
     private static $pphJsonContent;
 
     public static function setpphJsonPath($pphPath){
-     global $pphJsonPath;
+     global $pphJsonPath, $pphJsonContent;
      $pphJsonPath = $pphPath;
 
      $pphJsonContent = json_decode(file_get_contents($pphPath));
@@ -19,6 +19,12 @@ class Configurator{
     public static function setBeaCukaiPath($beaCukaiPath){
         global $beaCukaiJsonPath;
         $beaCukaiJsonPath = $beaCukaiPath;
+    }
+
+    public static function setPphJsonContent(){
+        global $pphJsonContent, $pphJsonPath;
+        $pphJsonContent = json_decode(file_get_contents($pphJsonPath));
+
     }
 
     public static function getpphJsonContent(){
