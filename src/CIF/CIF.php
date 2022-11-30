@@ -3,7 +3,7 @@ namespace ArRas\BeaCukai\CIF;
 
 #TODO
 
-class CIF{
+class Cif{
      private float $insuranceCost;
      private float $shippingCost;
      private float $goodsCost;

@@ -39,13 +39,13 @@ class Pdri{
     public function calculatePayablePph(float $importPayable, int $pphId): float{
         switch($pphId){
             case(0):
-                $this->pph = new NonNPWPOwner();
+                $this->pph = new NonNpwpOwner();
                 break;
             case(1):
-                $this->pph = new NPWPOwner();
+                $this->pph = new NpwpOwner();
                 break;
             case(2): 
-                $this->pph = new APIOwner();
+                $this->pph = new ApiOwner();
                 break;
             default:
                 echo "invalid";

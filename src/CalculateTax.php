@@ -34,7 +34,7 @@ Total payment = Harga barang + Biaya Bea Masuk + Total PDRI */
 
 class CalculateTax{
     private Product $prod;
-    private CIF $cif;
+    private Cif $cif;
     private Pdri $pdri;
 
     private $cifValue;
@@ -45,7 +45,7 @@ class CalculateTax{
     }
 
     public function calculateCIF(float $insuranceCost, float $shippingCost){
-        $this->cif = new CIF();
+        $this->cif = new Cif();
 
         $goodsCost = $this->prod->getPrice();
         $importFee = $this->prod->getEntryTax();
