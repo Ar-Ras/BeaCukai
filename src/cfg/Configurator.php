@@ -1,5 +1,5 @@
 <?php
-namespace ArRas\BeaCukai\cfg;
+namespace ArRas\BeaCukai\Cfg;
 
 #TODO
 

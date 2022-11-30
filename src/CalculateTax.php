@@ -2,8 +2,8 @@
 namespace ArRas\BeaCukai;
 
 
-use ArRas\BeaCukai\CIF\CIF;
-use ArRas\BeaCukai\PDRI\Pdri;
+use ArRas\BeaCukai\Cif\Cif;
+use ArRas\BeaCukai\Pdri\Pdri;
 
 #TODO
 

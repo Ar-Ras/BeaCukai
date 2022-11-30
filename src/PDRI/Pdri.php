@@ -1,13 +1,13 @@
 <?php
-namespace ArRas\BeaCukai\PDRI;
+namespace ArRas\BeaCukai\Pdri;
 
 use ArRas\BeaCukai\Product;
-use ArRas\BeaCukai\PPN\PpnTariff;
-use ArRas\BeaCukai\PPN\PpnBmTariff;
-use ArRas\BeaCukai\PPH\PphTariff;
-use ArRas\BeaCukai\PPH\Owners\NonNPWPOwner;
-use ArRas\BeaCukai\PPH\Owners\NPWPOwner;
-use ArRas\BeaCukai\PPH\Owners\APIOwner;
+use ArRas\BeaCukai\Ppn\PpnTariff;
+use ArRas\BeaCukai\Ppn\PpnBmTariff;
+use ArRas\BeaCukai\Pph\PphTariff;
+use ArRas\BeaCukai\Pph\Owners\NonNpwpOwner;
+use ArRas\BeaCukai\Pph\Owners\NpwpOwner;
+use ArRas\BeaCukai\Pph\Owners\ApiOwner;
 
 
 

@@ -1,5 +1,5 @@
 <?php
-namespace ArRas\BeaCukai\PPN;
+namespace ArRas\BeaCukai\Ppn;
 
 use ArRas\BeaCukai\Product;
 

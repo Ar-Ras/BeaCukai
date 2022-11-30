@@ -1,8 +1,8 @@
 <?php
-namespace ArRas\BeaCukai\PPH\Owners;
+namespace ArRas\BeaCukai\Pph\Owners;
 
-use ArRas\BeaCukai\PPH\PphTariff;
-use ArRas\BeaCukai\cfg\Configurator;
+use ArRas\BeaCukai\Pph\PphTariff;
+use ArRas\BeaCukai\Cfg\Configurator;
 
 #TODO
 
