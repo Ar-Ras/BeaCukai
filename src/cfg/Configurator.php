@@ -9,26 +9,22 @@ class Configurator{
     private static $pphJsonContent;
 
     public static function setpphJsonPath($pphPath){
-     global $pphJsonPath, $pphJsonContent;
-     $pphJsonPath = $pphPath;
+     self::$pphJsonPath = $pphPath;
 
-     $pphJsonContent = json_decode(file_get_contents($pphPath));
+     self::$pphJsonContent = json_decode(file_get_contents($pphPath));
 
     }
 
     public static function setBeaCukaiPath($beaCukaiPath){
-        global $beaCukaiJsonPath;
-        $beaCukaiJsonPath = $beaCukaiPath;
+        self::$BeaCukaiJsonPath = $beaCukaiPath;
     }
 
     public static function setPphJsonContent(){
-        global $pphJsonContent, $pphJsonPath;
-        $pphJsonContent = json_decode(file_get_contents($pphJsonPath));
+        self::$pphJsonContent = json_decode(file_get_contents(self::$pphJsonPath));
 
     }
 
     public static function getPphJsonContent(){
-        global $pphJsonContent;
-        return $pphJsonContent;
+        return self::$pphJsonContent;
     }
 }
