@@ -6,7 +6,7 @@ use ArRas\BeaCukai\Cfg\Configurator;
 
 #TODO
 
-class APIOwner implements PphTariff{
+class ApiOwner implements PphTariff{
 
     public function __construct(){
         

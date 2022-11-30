@@ -7,7 +7,7 @@ use ArRas\BeaCukai\Cfg\Configurator;
 
 #TODO
 
-class NonNPWPOwner implements PphTariff{
+class NonNpwpOwner implements PphTariff{
 
     public function __construct(){
         
