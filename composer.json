@@ -1,5 +1,5 @@
 {
-    "name": "ar-ras/bea-cukai",
+    "name": "ArRas/BeaCukai",
     "description": "Final project for Code Reusability course",
     "type": "library",
     "autoload": {
