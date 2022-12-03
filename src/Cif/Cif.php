@@ -16,6 +16,7 @@ class Cif{
       }
 
      public function calculateCIF(float $insuranceCost, float $shippingCost, $goodsCost): float{
+        $this->goodsCost = $goodsCost;
          $this->CIF = $insuranceCost + $shippingCost + $goodsCost;
 
          return $this->CIF;

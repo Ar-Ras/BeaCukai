@@ -8,7 +8,7 @@ class Product{
     private string $description;
     private int $amount;
     private int $price;
-    private float $EntryTax;
+    private float $entryTax;
     private float $ppn;
     private float $ppnBm;
 
@@ -37,7 +37,7 @@ class Product{
     }
 
     public function getEntryTax(){
-        return $this->EntryTax;
+        return $this->entryTax;
     }
 
     public function getPrice(){
