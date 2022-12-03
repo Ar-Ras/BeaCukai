@@ -58,12 +58,12 @@ class Pdri{
 
     public function calculatePayablePpnBm(float $importPayable): float{
         $ppnBmCalc = new PpnBmTariff($this->product);
-        $ppn = $this->prod->getPpn();
+        $ppn = $this->product->getPpn();
 
 
         $this->payablePpnBm = $ppnBmCalc->calculatePpnBm($importPayable);
 
-        $ppn = $this->prod->getPpn();
+        $ppn = $this->product->getPpn();
 
         $this->payablePpn = $ppn * ($this->prod->getPrice() - $this->payablePpnBm);
         
