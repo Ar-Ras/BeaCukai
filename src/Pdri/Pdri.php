@@ -90,7 +90,7 @@ class Pdri{
 
     public function calculateTotalImportFee(): float{
         
-        $this->totalImportFee = $this->payablePpn + $this->payablePph + $this->payableImport + $this->payablePpnBm;
+        $this->totalImportFee = $this->payablePpn + $this->payablePph + $this->payablePpnBm;
         return $this->totalImportFee;
     }
 

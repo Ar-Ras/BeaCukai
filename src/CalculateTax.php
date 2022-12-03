@@ -63,7 +63,7 @@ class CalculateTax{
         $this->pdri->calculatePayablePpn($this->cifValue);
         $this->pdri->calculatePayablePph($this->cifValue, $pphId);
 
-        if ($this->prod->getppnBm > 0)
+        if ($this->prod->getppnBm() > 0)
             $this->pdri->calculatePayablePpnBm($this->cifValue);
 
 

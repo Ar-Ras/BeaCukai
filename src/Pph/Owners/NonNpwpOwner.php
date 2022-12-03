@@ -19,7 +19,7 @@ class NonNpwpOwner implements PphTariff{
 
         for($i=0; $i < count($pphJson); $i++){
             if ($pphJson[$i]['id'] == 0)
-                $pphVal = $pphJson[$i]['value'];
+                $pphVal = $pphJson[$i]['Value'];
         }
 
         return $val * $pphVal;

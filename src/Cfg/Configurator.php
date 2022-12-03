@@ -11,7 +11,7 @@ class Configurator{
     public static function setpphJsonPath($pphPath){
      self::$pphJsonPath = $pphPath;
 
-     self::$pphJsonContent = json_decode(file_get_contents($pphPath));
+     self::$pphJsonContent = json_decode(file_get_contents($pphPath), true);
 
     }
 
