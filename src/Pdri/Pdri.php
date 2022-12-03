@@ -17,7 +17,7 @@ class Pdri{
 
     private float $payablePpn;
     private float $payablePph;
-    private float $payablePpnBm;
+    private float $payablePpnBm = 0;
     private float $totalImportFee;
 
     private Product $product;
