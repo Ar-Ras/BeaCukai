@@ -65,7 +65,7 @@ class Pdri{
 
         $ppn = $this->product->getPpn();
 
-        $this->payablePpn = $ppn * ($this->prod->getPrice() - $this->payablePpnBm);
+        $this->payablePpn = $ppn * ($this->product->getPrice() - $this->payablePpnBm);
         
 
 
