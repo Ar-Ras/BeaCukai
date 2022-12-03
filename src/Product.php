@@ -13,6 +13,10 @@ class Product{
     private float $ppnBm;
 
     public function __construct(){
+        $this->price = 0;
+        $this->entryTax = 0;
+        $this->ppn = 0;
+        $this->ppnBm = 0;
         #TODO
     }
 
