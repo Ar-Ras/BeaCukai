@@ -15,7 +15,7 @@ Package perhitungan pajak barang impor fungsinya ialah untuk mempermudah user da
 Install package with composer
 
 ```bash
-  composer require ar-ras/bea-cukai:dev-main
+  composer require ar-ras/bea-cukai
   composer install
 ```
     
