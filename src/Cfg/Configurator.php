@@ -5,7 +5,6 @@ namespace ArRas\BeaCukai\Cfg;
 
 class Configurator{
     private static String $pphJsonPath = "../../database/pph.json";
-    private static String $BeaCukaiJsonPath = "";
     private static $pphJsonContent;
 
     public static function setpphJsonPath($pphPath){
@@ -13,10 +12,6 @@ class Configurator{
 
      self::$pphJsonContent = json_decode(file_get_contents($pphPath), true);
 
-    }
-
-    public static function setBeaCukaiPath($beaCukaiPath){
-        self::$BeaCukaiJsonPath = $beaCukaiPath;
     }
 
     public static function setPphJsonContent(){
